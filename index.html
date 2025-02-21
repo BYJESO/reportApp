@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Préstamos entre Hamburgueserías</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestión de Préstamos entre Hamburgueserías</h1>
+
+      <div class="loan-form">
+        <h2>Registrar Préstamo</h2>
+        <form id="loanForm">
+          <input
+            type="text"
+            id="productName"
+            placeholder="Nombre del producto"
+            required
+          />
+          <input type="number" id="quantity" placeholder="Cantidad" required />
+          <select id="unit" required>
+            <option value="g">Gramos</option>
+            <option value="unidades">Unidades</option>
+            <option value="ml">Mililitros</option>
+          </select>
+          <select id="restaurant" required>
+            <option value="">Selecciona la hamburguesería</option>
+            <option value="A">Calera BG</option>
+            <option value="B">Mr Muu</option>
+          </select>
+          <button type="submit">Registrar Préstamo</button>
+        </form>
+      </div>
+
+      <div class="loan-summary">
+        <h2>Resumen de Préstamos</h2>
+        <div id="loanSummary"></div>
+      </div>
+
+      <div class="product-lists">
+        <div class="product-list">
+          <h2>Calera BG</h2>
+          <ul id="listA"></ul>
+        </div>
+        <div class="product-list">
+          <h2>Mr Muu</h2>
+          <ul id="listB"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
